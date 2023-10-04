@@ -1,0 +1,29 @@
+{
+    "name": {
+        "$ref": "package.json#/name"
+    },
+    "branch": "default",
+    "version": {
+        "$ref": "package.json#/version"
+    },
+    "type": "FEATURE",
+    "title": "Community Badges",
+    "description": {
+        "$ref": "package.json#/description"
+    },
+    "main": {
+        "$ref": "package.json#/main"
+    },
+    "icon": "src/icons/no-logo.png",
+    "contextIds": [
+        "twitter-bos-config"
+    ],
+    "config": {
+        "schema": "config/schema.json",
+        "default": "config/default.json"
+    },
+    "overlays": {},
+    "dependencies": {
+        "twitter-bos-config": "0.1.2"
+    }
+}
