@@ -1,6 +1,6 @@
 {
     "name": "community-badges",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Shows community badges from NEAR ecosystem in Twitter and GitHub, a solution developed during the Encode x NEAR Horizon Hackathon.",
     "main": "lib/index.js",
     "scripts": {
