@@ -1,0 +1,14 @@
+{
+  "badges": {
+    "mybadge.near/widget/LNC.ProTesterBadge": { "type": "full" },
+    "mybadge.near/widget/LNC.EliteBadge": { "type": "shorten" },
+    "mybadge.near/widget/LNC.CircleBadge": { "type": "community" }
+  },
+  "badgesByAccount": {
+    "paywall.near": [
+      "mybadge.near/widget/LNC.ProTesterBadge",
+      "mybadge.near/widget/LNC.EliteBadge",
+      "mybadge.near/widget/LNC.CircleBadge"
+    ]
+  }
+}

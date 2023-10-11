@@ -1,0 +1,12 @@
+{
+  "badges": {
+    "mybadge.near/widget/DevHacks.DevHacksBadge": { "type": "shorten" },
+    "mybadge.near/widget/DevHacks.CircleBadge": { "type": "community" }
+  },
+  "badgesByAccount": {
+    "paywall.near": [
+      "mybadge.near/widget/DevHacks.DevHacksBadge",
+      "mybadge.near/widget/DevHacks.CircleBadge"
+    ]
+  }
+}

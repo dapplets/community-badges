@@ -1,0 +1,12 @@
+{
+  "badges": {
+    "mybadge.near/widget/Dapplets.DappCreatorBadge": { "type": "full" },
+    "mybadge.near/widget/Dapplets.CircleBadge": { "type": "community" }
+  },
+  "badgesByAccount": {
+    "paywall.near": [
+      "mybadge.near/widget/Dapplets.DappCreatorBadge",
+      "mybadge.near/widget/Dapplets.CircleBadge"
+    ]
+  }
+}

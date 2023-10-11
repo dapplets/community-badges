@@ -1,0 +1,14 @@
+{
+  "badges": {
+    "mybadge.near/widget/Near.AlphaTesterBadge": { "type": "full" },
+    "mybadge.near/widget/Near.AvatarBadge": { "type": "avatar" },
+    "mybadge.near/widget/Near.VeteranBadge": { "type": "shorten" }
+  },
+  "badgesByAccount": {
+    "paywall.near": [
+      "mybadge.near/widget/Near.AlphaTesterBadge",
+      "mybadge.near/widget/Near.AvatarBadge",
+      "mybadge.near/widget/Near.VeteranBadge"
+    ]
+  }
+}

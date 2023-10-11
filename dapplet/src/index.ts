@@ -1,112 +1,44 @@
 import {} from "@dapplets/dapplet-extension";
-import users from "./near-social-users.json";
+import { CaService } from "./interfaces/ca-service";
+import { CaJsonService } from "./services/ca-json-service";
+import { BadgeJsonService } from "./services/badge-json-service";
+import { BadgeService } from "./interfaces/badge-service";
+import { WidgetService } from "./interfaces/widget-service";
+import { WidgetImplService } from "./services/widget-service";
 
 @Injectable
 export default class {
   @Inject("twitter-bos-config")
-  public adapter;
+  private adapter;
 
-  public users = new Map(users.map((user) => [user.twitter, user]));
+  private caService: CaService = new CaJsonService();
+  private badgeService: BadgeService = new BadgeJsonService();
+  private widgetService: WidgetService = new WidgetImplService(
+    this.caService,
+    this.badgeService
+  );
 
   async activate(): Promise<void> {
     const { bos } = this.adapter.exports;
     this.adapter.attachConfig({
-      PROFILE: (profile) => {
-        const user = this.users.get(profile.authorUsername)
+      PROFILE: (profile) =>
+        this.widgetService
+          .getWidgetsByAccount(profile.authorUsername, "twitter", "PROFILE")
+          .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg }))),
 
-        if (!user) return;
+      POST: (post) =>
+        this.widgetService
+          .getWidgetsByAccount(post.authorUsername, "twitter", "POST")
+          .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg }))),
 
-        return [
-          bos({
-            DEFAULT: {
-              src: "mybadge.near/widget/Near.BigAvatarBadge",
-              insertionPoint: "PROFILE_AVATAR"
-            },
-          }),
-          bos({
-            DEFAULT: {
-              src: "mybadge.near/widget/Dapplets.CircleBadge",
-              insertionPoint: "PROFILE_FULLNAME"
-            },
-          }),
-          bos({
-            DEFAULT: {
-              src: "mybadge.near/widget/LNC.CircleBadge",
-              insertionPoint: "PROFILE_FULLNAME"
-            },
-          }),
-          bos({
-            DEFAULT: {
-              src: "mybadge.near/widget/DevHacks.CircleBadge",
-              insertionPoint: "PROFILE_FULLNAME"
-            },
-          }),
-        ]
-      },
-      POST: (post) => [
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/Dapplets.CircleBadge",
-            insertionPoint: "POST_FULLNAME"
-          },
-        }),
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/LNC.CircleBadge",
-            insertionPoint: "POST_FULLNAME"
-          },
-        }),
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/DevHacks.CircleBadge",
-            insertionPoint: "POST_FULLNAME"
-          },
-        }),
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/Near.SmallAvatarBadge",
-            insertionPoint: "POST_AVATAR"
-          },
-        }),
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/LNC.EliteBadge",
-            insertionPoint: "TEXT_BEFORE"
-          },
-        }),
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/Near.VeteranBadge",
-            insertionPoint: "TEXT_BEFORE"
-          },
-        }),
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/DevHacks.DevHacksBadge",
-            insertionPoint: "TEXT_BEFORE"
-          },
-        }),
-      ],
-      PROFILE_POPUP: (profile) => [
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/Dapplets.DappCreatorBadge",
-            insertionPoint: "PROFILE_POPUP_TEXT"
-          },
-        }),
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/Dapplets.DappCreatorBadge",
-            insertionPoint: "PROFILE_POPUP_TEXT"
-          },
-        }),
-        bos({
-          DEFAULT: {
-            src: "mybadge.near/widget/Dapplets.DappCreatorBadge",
-            insertionPoint: "PROFILE_POPUP_TEXT"
-          },
-        }),
-      ],
+      PROFILE_POPUP: (profile) =>
+        this.widgetService
+          .getWidgetsByAccount(
+            profile.authorUsername,
+            "twitter",
+            "PROFILE_POPUP"
+          )
+          .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg }))),
     });
   }
 }

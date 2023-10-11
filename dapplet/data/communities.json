@@ -1,0 +1,16 @@
+{
+  "communities": [
+    {
+      "id": "dapplets"
+    },
+    {
+      "id": "learn-near-club"
+    },
+    {
+      "id": "dev-hacks"
+    },
+    {
+      "id": "near"
+    }
+  ]
+}
