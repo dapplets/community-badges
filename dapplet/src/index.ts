@@ -11,8 +11,12 @@ export default class {
   @Inject("twitter-bos-config")
   private adapter;
 
+  // In the future the implementation can be replaced with Connected Accounts service
   private caService: CaService = new CaJsonService();
+
+  // It will be replaced with a smart-contract
   private badgeService: BadgeService = new BadgeJsonService();
+  
   private widgetService: WidgetService = new WidgetImplService(
     this.caService,
     this.badgeService
@@ -20,24 +24,25 @@ export default class {
 
   async activate(): Promise<void> {
     const { bos } = this.adapter.exports;
+
+    // ToDo: extract website name from the virtual adapter
+    const originId = "twitter";
+
+    // Widget configs for BOS-components are provided by WidgetService
     this.adapter.attachConfig({
-      PROFILE: (profile) =>
+      PROFILE: ({ authorUsername: accountId }) =>
         this.widgetService
-          .getWidgetsByAccount(profile.authorUsername, "twitter", "PROFILE")
+          .getWidgetsByAccount(accountId, originId, "PROFILE")
           .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg }))),
 
-      POST: (post) =>
+      POST: ({ authorUsername: accountId }) =>
         this.widgetService
-          .getWidgetsByAccount(post.authorUsername, "twitter", "POST")
+          .getWidgetsByAccount(accountId, originId, "POST")
           .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg }))),
 
-      PROFILE_POPUP: (profile) =>
+      PROFILE_POPUP: ({ authorUsername: accountId }) =>
         this.widgetService
-          .getWidgetsByAccount(
-            profile.authorUsername,
-            "twitter",
-            "PROFILE_POPUP"
-          )
+          .getWidgetsByAccount(accountId, originId, "PROFILE_POPUP")
           .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg }))),
     });
   }
