@@ -1,0 +1,12 @@
+[package]
+name = "badge-registry"
+version = "1.0.0"
+authors = ["Dapplets Project <contact@dapplets.org>"]
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+near-sdk = "4.0.0"
+uint = { version = "0.9.3", default-features = false }
