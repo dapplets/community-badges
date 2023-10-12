@@ -12,7 +12,7 @@ pub struct CommunityRegistry {
 impl Default for CommunityRegistry {
     fn default() -> Self {
         Self {
-            owner: env::predecessor_account_id(),
+            owner: "mybadge.near".parse().unwrap(),
             communities: UnorderedSet::new(b"communities".to_vec()),
         }
     }
@@ -20,6 +20,15 @@ impl Default for CommunityRegistry {
 
 #[near_bindgen]
 impl CommunityRegistry {
+    #[init]
+    #[private]
+    pub fn init() -> Self {
+        Self {
+            owner: env::predecessor_account_id(),
+            communities: UnorderedSet::new(b"communities".to_vec()),
+        }
+    }
+
     pub fn get_communities(&self) -> Vec<AccountId> {
         self.communities.iter().collect()
     }
@@ -55,12 +64,12 @@ impl CommunityRegistry {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use near_sdk::testing_env;  
     use near_sdk::test_utils::VMContextBuilder;
+    use near_sdk::testing_env;
 
     #[test]
     fn test_add_community() {
-        let mut contract = CommunityRegistry::default();
+        let mut contract = CommunityRegistry::init();
         let community_account = AccountId::new_unchecked("community1.near".to_string());
         contract.add_community(community_account.clone());
 
@@ -70,7 +79,7 @@ mod tests {
 
     #[test]
     fn test_remove_community() {
-        let mut contract = CommunityRegistry::default();
+        let mut contract = CommunityRegistry::init();
         let community_account = AccountId::new_unchecked("community1.near".to_string());
         contract.add_community(community_account.clone());
 
@@ -84,7 +93,7 @@ mod tests {
 
     #[test]
     fn test_transfer_ownership() {
-        let mut contract = CommunityRegistry::default();
+        let mut contract = CommunityRegistry::init();
         let new_owner = AccountId::new_unchecked("new_owner.near".to_string());
         contract.transfer_ownership(new_owner.clone());
 
@@ -95,7 +104,7 @@ mod tests {
     #[test]
     #[should_panic(expected = "Only the owner can call this method.")]
     fn test_non_owner_transfer_ownership() {
-        let mut contract = CommunityRegistry::default();
+        let mut contract = CommunityRegistry::init();
         let new_owner = AccountId::new_unchecked("new_owner.near".to_string());
         set_context("third.near");
         contract.transfer_ownership(new_owner.clone());
