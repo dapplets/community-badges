@@ -1,7 +1,7 @@
 import {} from "@dapplets/dapplet-extension";
 import { CaService } from "./interfaces/ca-service";
 import { CaJsonService } from "./services/ca-json-service";
-import { BadgeJsonService } from "./services/badge-json-service";
+// import { BadgeJsonService } from "./services/badge-json-service";
 import { BadgeService } from "./interfaces/badge-service";
 import { WidgetService } from "./interfaces/widget-service";
 import { WidgetImplService } from "./services/widget-service";
@@ -16,7 +16,7 @@ export default class {
   private caService: CaService = new CaJsonService();
 
   // It will be replaced with a smart-contract
-  private badgeService: BadgeService = new BadgeJsonService();
+  private badgeService: BadgeService = new BadgeContractService();
   
   private widgetService: WidgetService = new WidgetImplService(
     this.caService,
