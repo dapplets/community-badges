@@ -1,29 +1,27 @@
 {
-    "name": {
-        "$ref": "package.json#/name"
-    },
-    "branch": "default",
-    "version": {
-        "$ref": "package.json#/version"
-    },
-    "type": "FEATURE",
-    "title": "Community Badges",
-    "description": {
-        "$ref": "package.json#/description"
-    },
-    "main": {
-        "$ref": "package.json#/main"
-    },
-    "icon": "src/icons/no-logo.png",
-    "contextIds": [
-        "bos-virtual-config.dapplet-base.eth"
-    ],
-    "config": {
-        "schema": "config/schema.json",
-        "default": "config/default.json"
-    },
-    "overlays": {},
-    "dependencies": {
-        "bos-virtual-config.dapplet-base.eth": "0.1.0"
-    }
+  "name": {
+    "$ref": "package.json#/name"
+  },
+  "branch": "default",
+  "version": {
+    "$ref": "package.json#/version"
+  },
+  "type": "FEATURE",
+  "title": "Community Badges",
+  "description": {
+    "$ref": "package.json#/description"
+  },
+  "main": {
+    "$ref": "package.json#/main"
+  },
+  "icon": "src/icons/no-logo.png",
+  "contextIds": ["bos-virtual-config.dapplet-base.eth"],
+  "config": {
+    "schema": "config/schema.json",
+    "default": "config/default.json"
+  },
+  "overlays": {},
+  "dependencies": {
+    "bos-virtual-config.dapplet-base.eth": "0.1.0"
+  }
 }
