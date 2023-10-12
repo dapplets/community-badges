@@ -5,6 +5,7 @@ import { BadgeJsonService } from "./services/badge-json-service";
 import { BadgeService } from "./interfaces/badge-service";
 import { WidgetService } from "./interfaces/widget-service";
 import { WidgetImplService } from "./services/widget-service";
+import { BadgeContractService } from "./services/badge-contract-service";
 
 @Injectable
 export default class {
