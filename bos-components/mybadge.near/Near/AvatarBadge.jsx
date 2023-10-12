@@ -1,14 +1,13 @@
 const size = props.size ?? "small"; // 'small' | 'medium'
 
 const IconWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--colors-pure-white, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--colors-pure-white, #fff);
 
-    ${
-      size === "small"
-        ? `
+  ${size === "small"
+    ? `
         width: 13px;
         height: 13px;
         border-radius: 13px;
@@ -18,12 +17,10 @@ const IconWrapper = styled.div`
             height: 8px;
         }
     `
-        : ""
-    }
+    : ""}
 
-    ${
-      size === "medium"
-        ? `
+  ${size === "medium"
+    ? `
         width: 32px;
         height: 32px;
         border-radius: 20px;
@@ -34,8 +31,7 @@ const IconWrapper = styled.div`
             height: 18px;
         }
     `
-        : ""
-    }
+    : ""}
 `;
 
 return (
