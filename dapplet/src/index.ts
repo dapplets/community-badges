@@ -39,12 +39,10 @@ export default class {
                     .getWidgetsByAccount(accountId, this.originId, 'POST')
                     .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg }))),
 
-            PROFILE_POPUP: (ctx) => {
-                console.log('ctx', ctx)
-                return this.widgetService
-                    .getWidgetsByAccount(ctx.authorUsername, this.originId, 'PROFILE_POPUP')
-                    .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg })))
-            },
+            PROFILE_POPUP: ({ authorUsername: accountId }) =>
+                this.widgetService
+                    .getWidgetsByAccount(accountId, this.originId, 'PROFILE_POPUP')
+                    .then((cfgs) => cfgs.map((cfg) => bos({ DEFAULT: cfg }))),
         })
     }
 }
