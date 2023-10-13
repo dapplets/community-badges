@@ -9,5 +9,6 @@ overflow-checks = true
 [workspace]
 members = [
     "community-registry",
-    "badge-registry"
+    "badge-registry",
+    "lnc-adapter"
 ]
