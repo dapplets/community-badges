@@ -1,71 +1,80 @@
-import { BadgeService } from '../interfaces/badge-service'
-import { CaService } from '../interfaces/ca-service'
-import { BadgeWidgetCfg, WidgetService } from '../interfaces/widget-service'
+import { BadgeService } from "../interfaces/badge-service";
+import { CaService } from "../interfaces/ca-service";
+import { BadgeWidgetCfg, WidgetService } from "../interfaces/widget-service";
 
 const BADGE_TYPES = {
-    avatar: {
-        PROFILE: {
-            insertionPoint: 'PROFILE_AVATAR',
-            size: 'medium',
-        },
-        POST: {
-            insertionPoint: 'POST_AVATAR',
-            size: 'small',
-        }
+  avatar: {
+    PROFILE: {
+      insertionPoint: "PROFILE_AVATAR",
+      size: "medium",
     },
-    community: {
-        PROFILE: {
-            insertionPoint: 'PROFILE_FULLNAME',
-        },
-        POST: {
-            insertionPoint: 'POST_FULLNAME',
-        },
+    POST: {
+      insertionPoint: "POST_AVATAR",
+      size: "small",
     },
-    shorten: {
-        POST: {
-            insertionPoint: 'TEXT_BEFORE',
-        },
+  },
+  community: {
+    PROFILE: {
+      insertionPoint: "PROFILE_FULLNAME",
     },
-    full: {
-        PROFILE_POPUP: {
-            insertionPoint: 'PROFILE_POPUP_TEXT',
-        },
+    POST: {
+      insertionPoint: "POST_FULLNAME",
     },
-}
+  },
+  shorten: {
+    POST: {
+      insertionPoint: "TEXT_BEFORE",
+    },
+  },
+  full: {
+    PROFILE_POPUP: {
+      insertionPoint: "PROFILE_POPUP_TEXT",
+    },
+  },
+};
 
 export class WidgetImplService implements WidgetService {
-    constructor(private _caService: CaService, private _badgeService: BadgeService) {}
+  constructor(
+    private _caService: CaService,
+    private _badgeService: BadgeService
+  ) {}
 
-    async getWidgetsByAccount(
-        accountId: string,
-        originId: string,
-        contextType: string
-    ): Promise<BadgeWidgetCfg[]> {
-        const linkedAccounts = await this._caService.getLinkedAccounts({
-            accountId,
-            originId,
-        })
+  async getWidgetsByAccount(
+    accountId: string,
+    originId: string,
+    contextType: string
+  ): Promise<BadgeWidgetCfg[]> {
+    const linkedAccounts = await this._caService.getLinkedAccounts({
+      accountId,
+      originId,
+    });
 
-        const nearAccount = linkedAccounts.find((acc) => acc.originId === 'near')
+    const nearAccount = linkedAccounts.find((acc) => acc.originId === "near");
 
-        if (!nearAccount) return []
+    if (!nearAccount) return [];
 
-        const badges = await this._badgeService.getBadgesByAccount(nearAccount.accountId)
+    const badges = await this._badgeService.getBadgesByAccount(
+      nearAccount.accountId
+    );
 
-        // Show NEAR avatar badge for all NEAR users
-        badges.push({
-            bosWidgetSrc: 'mybadge.near/widget/Near.AvatarBadge',
-            type: 'avatar'
-        })
+    // Show NEAR avatar badge for all NEAR users
+    badges.push({
+      bosWidgetSrc: "mybadge.near/widget/Near.AvatarBadge",
+      type: "avatar",
+    });
 
-        const widgetCfgs = badges
-            .map((badge) => {
-                const widgetCfg = BADGE_TYPES[badge.type]?.[contextType]
-                if (!widgetCfg) return null
-                return { src: badge.bosWidgetSrc, ...widgetCfg }
-            })
-            .filter((cfg) => !!cfg)
+    const widgetCfgs = badges
+      .map((badge) => {
+        const widgetCfg = BADGE_TYPES[badge.type]?.[contextType];
+        if (!widgetCfg) return null;
+        return {
+          src: badge.bosWidgetSrc,
+          ...widgetCfg, // badge-type specific props
+          ...(badge.props ?? {}), // community specific props
+        };
+      })
+      .filter((cfg) => !!cfg);
 
-        return widgetCfgs
-    }
+    return widgetCfgs;
+  }
 }

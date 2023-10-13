@@ -7,6 +7,10 @@
     "paywall.near": [
       "mybadge.near/widget/Dapplets.DappCreatorBadge",
       "mybadge.near/widget/Dapplets.CircleBadge"
+    ],
+    "lisofffa.near": [
+      "mybadge.near/widget/Dapplets.DappCreatorBadge",
+      "mybadge.near/widget/Dapplets.CircleBadge"
     ]
   }
 }

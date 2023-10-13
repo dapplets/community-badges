@@ -4,13 +4,22 @@ import users from "../../data/near-social-users.json";
 export class CaJsonService implements CaService {
   private _userByTwitter = new Map(
     users.map((user) => [
-      user.twitter?.replace("https://twitter.com/", ""),
+      user.twitter
+        ?.replace("https://twitter.com/", "")
+        .replace("@", "")
+        .toLowerCase(),
       user,
     ])
   );
 
   private _userByGitHub = new Map(
-    users.map((user) => [user.github?.replace("https://twitter.com/", ""), user])
+    users.map((user) => [
+      user.github
+        ?.replace("https://github.com/", "")
+        .replace("@", "")
+        .toLowerCase(),
+      user,
+    ])
   );
 
   private _userByOrigin = {
@@ -24,7 +33,7 @@ export class CaJsonService implements CaService {
     }
 
     const accountDetails = this._userByOrigin[account.originId].get(
-      account.accountId
+      account.accountId.toLowerCase()
     );
 
     if (!accountDetails) {

@@ -3,8 +3,9 @@ import near from "../../data/badges-near.json";
 import devhacks from "../../data/badges-devhacks.json";
 import lnc from "../../data/badges-lnc.json";
 import dapplets from "../../data/badges-dapplets.json";
+import neardevgov from '../../data/badges-neardevgov.json';
 
-const allData = [near, devhacks, lnc, dapplets];
+const allData = [near, devhacks, lnc, dapplets, neardevgov];
 
 export class BadgeJsonService implements BadgeService {
   async getBadgesByAccount(accountId: string): Promise<Badge[]> {

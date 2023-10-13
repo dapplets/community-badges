@@ -764,7 +764,7 @@
   },
   {
     "near": "keyokey.near",
-    "twitter": "@alexchiocchi"
+    "twitter": "alexchiocchi"
   },
   {
     "near": "createsomechaos.near",
@@ -18775,7 +18775,23 @@
     "twitter": "@DonMalbecc"
   },
   {
-    "near": "blockchainatucsb_baf.near",
-    "twitter": "jack_fineman"
+    "near": "osmann.near",
+    "github": "esaminu"
+  },
+  {
+    "near": "david-millar-durrant.near",
+    "github": "DavidM-D"
+  },
+  {
+    "near": "milosjovcc.near",
+    "twitter": "milosjovcc"
+  },
+  {
+    "twitter": "lisofffa",
+    "near": "lisofffa.near"
+  },
+  {
+    "twitter": "AlexSkidanov",
+    "near": "alex.near"
   }
 ]

@@ -1,0 +1,170 @@
+{
+  "badges": {
+    "mybadge.near/widget/Near.CircleBadge": { "type": "community" },
+    "mybadge.near/widget/Near.CoreDev": { "type": "shorten" },
+    "mybadge.near/widget/Near.ProtocolWorkingGroup": { "type": "full" },
+    "mybadge.near/widget/Near.ContractStandardsWorkingGroup": {
+      "type": "full"
+    },
+    "mybadge.near/widget/Near.WalletStandardsWorkingGroup": { "type": "full" },
+    "mybadge.near/widget/Near.ToolingWorkingGroup": { "type": "full" },
+    "mybadge.near/widget/Near.ZeroKnowledgeWorkingGroup": { "type": "full" },
+    "mybadge.near/widget/Near.ValidatorWorkingGroup": { "type": "full" },
+    "mybadge.near/widget/Near.BossShortenBadge": { "type": "shorten" },
+    "mybadge.near/widget/Near.BossFullBadge": { "type": "full" }
+  },
+  "badgesByAccount": {
+    "woben.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ProtocolWorkingGroup"
+    ],
+    "marcelo.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ProtocolWorkingGroup"
+    ],
+    "eatmore.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ContractStandardsWorkingGroup"
+    ],
+    "robert.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ContractStandardsWorkingGroup"
+    ],
+    "frol.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge",
+      "mybadge.near/widget/Near.ContractStandardsWorkingGroup"
+    ],
+    "cameron_banyan.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.WalletStandardsWorkingGroup"
+    ],
+    "danaat.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.WalletStandardsWorkingGroup"
+    ],
+    "daryl.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.WalletStandardsWorkingGroup"
+    ],
+    "osmann.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.WalletStandardsWorkingGroup"
+    ],
+    "serhii.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ToolingWorkingGroup"
+    ],
+    "david-millar-durrant.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ToolingWorkingGroup"
+    ],
+    "bo.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ToolingWorkingGroup"
+    ],
+    "zpoken.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ZeroKnowledgeWorkingGroup"
+    ],
+    "garvit_electron.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ZeroKnowledgeWorkingGroup"
+    ],
+    "snjax.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ZeroKnowledgeWorkingGroup"
+    ],
+    "alan777.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ValidatorWorkingGroup"
+    ],
+    "denysk.sputnik-dao.near.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ValidatorWorkingGroup"
+    ],
+    "mariozito.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.CoreDev",
+      "mybadge.near/widget/Near.ValidatorWorkingGroup"
+    ],
+    "root.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "zavodil.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "vlad.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "jake.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "aliaksandrh.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "julie.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "as2.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "ahsas.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "mob.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "alex.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "whendacha.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ],
+    "keyokey.near": [
+      "mybadge.near/widget/Near.CircleBadge",
+      "mybadge.near/widget/Near.BossShortenBadge",
+      "mybadge.near/widget/Near.BossFullBadge"
+    ]
+  }
+}

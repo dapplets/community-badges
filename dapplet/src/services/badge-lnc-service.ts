@@ -10,6 +10,11 @@ const COMMUNITY_BADGE: Badge = {
   type: "community",
 };
 
+const DROP_BALANCE: Badge = {
+  bosWidgetSrc: "mybadge.near/widget/LNC.DropBalanceBadge",
+  type: "full",
+};
+
 export class BadgeLncService implements BadgeService {
   private _nftContract: Promise<NftContract> = Core.contract(
     "near",
@@ -24,6 +29,8 @@ export class BadgeLncService implements BadgeService {
   public async getBadgesByAccount(accountId: string): Promise<Badge[]> {
     const nft = await this._nftContract;
     const supply = await nft.nft_supply_for_owner({ account_id: accountId });
-    return supply !== "0" ? [COMMUNITY_BADGE] : [];
+    return supply !== "0"
+      ? [COMMUNITY_BADGE, { ...DROP_BALANCE, props: { accountId } }]
+      : [];
   }
 }
