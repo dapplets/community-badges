@@ -1,4 +1,6 @@
-# Dapplet
+# Community Badges Dapplet
+
+![image](https://github.com/dapplets/community-badges/blob/main/docs/readme-banner.png)
 
 This project was bootstrapped with [Create Dapplet App](https://github.com/dapplets/create-dapplet-app)
 
