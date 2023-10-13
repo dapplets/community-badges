@@ -3,8 +3,8 @@ return (
     src="mybadge.near/widget/Generic.TextBadge"
     props={{
       iconSrc: "mybadge.near/widget/Near.LogoIcon",
-      label: "VETERAN",
-      color: "blue",
+      label: "COREDEV",
+      color: "gray",
     }}
   />
 );

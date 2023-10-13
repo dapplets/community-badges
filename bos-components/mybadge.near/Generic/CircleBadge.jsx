@@ -17,22 +17,30 @@ const palette = {
     background: "#E7ECEF",
     text: "#222222",
   },
+  orange: {
+    background: "#ffb259",
+    text: "#222",
+  },
+  black: {
+    background: "#222",
+    text: "#fff",
+  },
 };
 
 const colors = palette[props.color ?? DEFAULT_COLOR];
 
 const IconWrapper = styled.div`
-  display: flex;
-  width: 16px;
-  height: 16px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 16px;
-  background: ${colors.background};
+    display: flex;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: ${colors.background};
 
-  * {
-    fill: ${colors.text};
-  }
+    * {
+        fill: ${colors.text};
+    }
 `;
 
 return (

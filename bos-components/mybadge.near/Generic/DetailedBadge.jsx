@@ -2,10 +2,10 @@ const DEFAULT_COLOR = "gray";
 
 const palette = {
   red: {
-    iconBackground: "#222222",
+    iconBackground: "#fff",
     textBackground: "#DB504A",
     text: "#fff",
-    icon: "#fff",
+    icon: "#DB504A",
   },
   green: {
     iconBackground: "#fff",
@@ -14,10 +14,10 @@ const palette = {
     icon: "#16AD38",
   },
   blue: {
-    iconBackground: "#222222",
+    iconBackground: "#fff",
     textBackground: "#4A73DB",
     text: "#fff",
-    icon: "#fff",
+    icon: "#4A73DB",
   },
   gray: {
     iconBackground: "#222222",
@@ -37,36 +37,42 @@ const palette = {
     text: "#222",
     icon: "#fff",
   },
+  orange: {
+    iconBackground: "#fff",
+    textBackground: "#ffb259",
+    text: "#222",
+    icon: "#222",
+  },
 };
 
 const colors = palette[props.color ?? DEFAULT_COLOR];
 
 const Chip = styled.div`
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  overflow: hidden;
-  background: ${colors.textBackground};
-  height: 32px;
-  padding: 0 3px;
-  gap: 3px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    background: ${colors.textBackground};
+    height: 32px;
+    padding: 0 3px;
+    gap: 3px;
 `;
 
 const IconWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${colors.iconBackground};
-  width: 28px;
-  height: 28px;
-  border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: ${colors.iconBackground};
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
 
-  * {
-    fill: ${colors.icon};
-    width: 20px;
-    height: 20px;
-  }
+    * {
+        fill: ${colors.icon};
+        width: 20px;
+        height: 20px;
+    }
 `;
 
 const TextWrapper = styled.div`
@@ -75,20 +81,19 @@ const TextWrapper = styled.div`
 `;
 
 const PrimaryText = styled.div`
-  color: ${colors.text};
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
+    color: ${colors.text};
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 `;
 
 const SecondaryText = styled.div`
-  color: ${colors.text};
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+    color: ${colors.text};
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 `;
 
 return (
