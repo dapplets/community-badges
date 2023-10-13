@@ -1,11 +1,13 @@
 import {} from "@dapplets/dapplet-extension";
 import { CaService } from "./interfaces/ca-service";
 import { CaJsonService } from "./services/ca-json-service";
-// import { BadgeJsonService } from "./services/badge-json-service";
+import { BadgeJsonService } from "./services/badge-json-service";
 import { BadgeService } from "./interfaces/badge-service";
 import { WidgetService } from "./interfaces/widget-service";
 import { WidgetImplService } from "./services/widget-service";
 import { BadgeContractService } from "./services/badge-contract-service";
+import { BadgeAggregator } from "./services/badge-aggregator";
+import { BadgeLncService } from "./services/badge-lnc-service";
 
 @Injectable
 export default class {
@@ -17,12 +19,15 @@ export default class {
   // In the future the implementation can be replaced with Connected Accounts service
   private caService: CaService = new CaJsonService();
 
-  // It will be replaced with a smart-contract
-  private badgeService: BadgeService = new BadgeContractService();
+  private badgeAggregator: BadgeService = new BadgeAggregator(
+    new BadgeContractService(),
+    new BadgeJsonService(),
+    new BadgeLncService()
+  );
 
   private widgetService: WidgetService = new WidgetImplService(
     this.caService,
-    this.badgeService
+    this.badgeAggregator
   );
 
   async activate(): Promise<void> {

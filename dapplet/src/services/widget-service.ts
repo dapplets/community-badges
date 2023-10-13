@@ -11,7 +11,7 @@ const BADGE_TYPES = {
         POST: {
             insertionPoint: 'POST_AVATAR',
             size: 'small',
-        },
+        }
     },
     community: {
         PROFILE: {

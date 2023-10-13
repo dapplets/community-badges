@@ -19,19 +19,7 @@ export class BadgeContractService implements BadgeService {
     BadgesRegistryContract[]
   > = this._instantiateBadgeContracts();
 
-  private _cache = new Map<string, Promise<Badge[]>>();
-
-  async getBadgesByAccount(accountId: string): Promise<Badge[]> {
-    if (!this._cache.has(accountId)) {
-      this._cache.set(accountId, this._getBadgesByAccountFromContract(accountId))
-    }
-
-    return this._cache.get(accountId)
-  }
-
-  private async _getBadgesByAccountFromContract(accountId: string): Promise<Badge[]> {
-    console.log(accountId)
-    
+  public async getBadgesByAccount(accountId: string): Promise<Badge[]> {
     const registries = await this._badgeRegistries;
 
     const badges = await Promise.all(
