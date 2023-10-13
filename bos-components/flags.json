@@ -82,16 +82,16 @@
       "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"PROTOCOL\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
     },
     "mybadge.near/widget/Near.ContractStandardsWorkingGroup": {
-      "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"CONTRACT STANDARDS\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
+      "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"STANDARDS\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
     },
     "mybadge.near/widget/Near.WalletStandardsWorkingGroup": {
-      "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"WALLET STANDARDS\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
+      "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"STANDARDS\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
     },
     "mybadge.near/widget/Near.ToolingWorkingGroup": {
       "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"TOOLING\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
     },
     "mybadge.near/widget/Near.ZeroKnowledgeWorkingGroup": {
-      "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"ZERO KNOWLEDGE\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
+      "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"ZK\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
     },
     "mybadge.near/widget/Near.ValidatorWorkingGroup": {
       "code": "return (\n  <Widget\n    src=\"mybadge.near/widget/Generic.DetailedBadge\"\n    props={{\n      primaryText: \"VALIDATOR\",\n      secondaryText: \"Working Group\",\n      iconSrc: \"mybadge.near/widget/Near.LogoIcon\",\n    }}\n  />\n);\n"
