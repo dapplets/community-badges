@@ -52,6 +52,12 @@ export class WidgetImplService implements WidgetService {
 
         const badges = await this._badgeService.getBadgesByAccount(nearAccount.accountId)
 
+        // Show NEAR avatar badge for all NEAR users
+        badges.push({
+            bosWidgetSrc: 'mybadge.near/widget/Near.AvatarBadge',
+            type: 'avatar'
+        })
+
         const widgetCfgs = badges
             .map((badge) => {
                 const widgetCfg = BADGE_TYPES[badge.type]?.[contextType]
