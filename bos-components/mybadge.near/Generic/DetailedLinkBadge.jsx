@@ -1,16 +1,3 @@
-function randomIntFromInterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-State.init({ liked: false, likes: randomIntFromInterval(0, 100) });
-
-function handleClick() {
-  State.update({
-    liked: !state.liked,
-    likes: state.liked ? state.likes - 1 : state.likes + 1,
-  });
-}
-
 const DEFAULT_COLOR = "gray";
 
 const palette = {
@@ -60,7 +47,7 @@ const palette = {
 
 const colors = palette[props.color ?? DEFAULT_COLOR];
 
-const Chip = styled.div`
+const Chip = styled.a`
   font-family: sans-serif;
   display: flex;
   align-items: center;
@@ -72,6 +59,7 @@ const Chip = styled.div`
   gap: 6px;
   width: 128px;
   cursor: pointer;
+  text-decoration: none;
 
   // ICON
   > div:nth-child(1) {
@@ -95,6 +83,8 @@ const Chip = styled.div`
   }
 
   &:hover {
+    text-decoration: none;
+
     // ICON
     > div:nth-child(1) {
       > *:nth-child(1) {
@@ -102,9 +92,6 @@ const Chip = styled.div`
       }
       > *:nth-child(2) {
         display: initial;
-        * {
-          fill: ${state.liked ? "#DB504A" : colors.icon};
-        }
       }
     }
 
@@ -159,16 +146,18 @@ const SecondaryText = styled.div`
 `;
 
 return (
-  <Chip onClick={handleClick}>
+  <Chip href={props.href} target="_blank">
     <IconWrapper>
       <Widget src={props.iconSrc} />
-      <Widget src={"mybadge.near/widget/Generic.HeartIcon"} />
+      <Widget src={"mybadge.near/widget/Generic.ExternalLinkIcon"} />
     </IconWrapper>
     <TextWrapper>
       <PrimaryText>{props.primaryText}</PrimaryText>
       <SecondaryText>{props.secondaryText}</SecondaryText>
       <PrimaryText>
-        {state.likes > 1 ? `${state.likes} LIKES` : `${state.likes} LIKE`}
+        HOW TO GET
+        <br />
+        THIS BADGE?
       </PrimaryText>
     </TextWrapper>
   </Chip>

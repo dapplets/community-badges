@@ -1,5 +1,6 @@
 {
   "label": "NEAR BOSs",
-  "color": "blue",
-  "iconSrc": "mybadge.near/widget/Near.LogoIcon"
+  "color": "orange",
+  "iconSrc": "mybadge.near/widget/LNC.LogoIcon",
+  "primaryText": "PRO TESTER"
 }
