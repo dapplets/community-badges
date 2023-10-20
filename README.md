@@ -1,12 +1,16 @@
-# Community Badges Dapplet
+![QiMiGKX](https://github.com/dapplets/community-badges/assets/51093278/3a0b8c37-b122-4cb8-b5a1-50952feecc45)# Community Badges Dapplet
 
 ![image](https://github.com/dapplets/community-badges/blob/main/docs/readme-banner.jpg)
 
 
 ## Short platform introduction
+
+
 Dapplets provides tools for embedding Web3 applications into any web page without getting permission from its owner. We are using BOS-components to do that. 
 
 Using Dapplets Browser Extension we have introduced technology called Mutable Web which allows any user to create a mutation of a page in a permissionless way and offer it to the community use instead of the original one.
+![QiMiGKX](https://github.com/dapplets/community-badges/assets/51093278/84db20c9-63a0-4fd4-a75a-b683e83f2da6)
+
 
 To illustrate the technology we developed Community Tools that customize and improve UX for the community on 3rd party websites like Twitter and Github to show badges to users who are members of the NEAR community, making them more visible. 
 
@@ -51,6 +55,8 @@ Thanks to the virtual adapter all badges are also shown on GitHub.
 
 ## Implementation details
 
+![Mutation 3 (2)](https://github.com/dapplets/community-badges/assets/51093278/290cf1eb-7eea-4688-a9e7-31adc470dd9b)
+
 Mutation fetches user community badges from a contract. 
 The list of communities is managed by the mutation maintainer. 
 The community itself manages the list of its users and badges.
@@ -72,6 +78,10 @@ This is a major paradigm shift in web architecture.
 The community becomes capable of customizing 3rd party webpages for its needs. 
 This is another major paradigm shift.
 
+
+## Team
+Alexander Sakhaev
+Konstantin Iakovlev
 
 ## Related Links
 
