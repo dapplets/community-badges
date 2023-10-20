@@ -1,4 +1,4 @@
-![QiMiGKX](https://github.com/dapplets/community-badges/assets/51093278/3a0b8c37-b122-4cb8-b5a1-50952feecc45)# Community Badges Dapplet
+# Community Badges Dapplet
 
 ![image](https://github.com/dapplets/community-badges/blob/main/docs/readme-banner.jpg)
 
