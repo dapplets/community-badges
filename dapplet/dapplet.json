@@ -14,8 +14,10 @@
   "main": {
     "$ref": "package.json#/main"
   },
-  "icon": "src/icons/no-logo.png",
-  "contextIds": ["bos-virtual-config.dapplet-base.eth"],
+  "icon": "src/icons/community-badges.png",
+  "contextIds": [
+    "bos-virtual-config.dapplet-base.eth"
+  ],
   "config": {
     "schema": "config/schema.json",
     "default": "config/default.json"
