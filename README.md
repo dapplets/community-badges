@@ -1,6 +1,7 @@
 # Community Badges Dapplet
 
-![image](https://github.com/dapplets/community-badges/blob/main/docs/readme-banner.jpg)
+![image](/docs/dark.png#gh-dark-mode-only)
+![image](/docs/light.png#gh-light-mode-only)
 
 
 ## Short platform introduction
